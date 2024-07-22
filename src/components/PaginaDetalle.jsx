@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
-import { pedirItemId } from "../helpers/pedirDatos";
+import { doc, getDoc } from "firebase/firestore";
+
 import ItemDetalle from "./ItemDetalle";
 import { useParams } from "react-router-dom";
+import { db } from "../firebase/data";
 
 
 const PaginaDetalle = () => {
@@ -11,12 +13,13 @@ const PaginaDetalle = () => {
     console.log(id)
 
     useEffect(() => {
-        pedirItemId(Number(id))
-            .then((res) => {
-                setItem(res);
-            })
-
-
+       const docRef = doc(db, "productos", id);
+       getDoc(docRef)
+       .then((resp) => {
+        setItem(
+            {...resp.data(), id: resp.id }
+        )
+       })
     }, [id])
 
     return (
