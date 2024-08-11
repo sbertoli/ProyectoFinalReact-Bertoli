@@ -30,7 +30,9 @@ $bgPrimary: #242424;
 
 }
 
-
+.logoSouth{
+  width: 10%;
+}
 
 
 nav{
@@ -78,6 +80,7 @@ nav{
 
 .linkMenu:hover {
   text-decoration: underline;
+  
 }
 
 .productos {
@@ -94,7 +97,7 @@ nav{
   overflow: hidden;
   border: 2px solid rgb(255, 255, 255);
   box-shadow: 0px 1px 10px red;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 
 }
 
@@ -141,8 +144,12 @@ nav{
 
 .detalleProductos img {
   width: 100%;
+  
 }
-
+.imagenProducto{
+  box-shadow: 0px 1px 10px red;
+  border-radius: 8px;
+}
 .detalleProductos h3 {
   font-size: 2rem;
 }
@@ -188,6 +195,9 @@ nav{
 .itemCount button:hover, .agregarAlCarrito:hover, .enviar:hover {
   background-color: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
+}
+.agregarAlCarrito{
+  width: 150px;
 }
 .botonVaciar{
   background-color: rgba(151, 0, 0, 0.363);

@@ -5,7 +5,7 @@ import CartWidget from './CartWidget'
 const NavBar = () => {
   return (
     <nav className='navBar'>
-      <Link to="/" className='logo'><h1>SouthSide - Shop</h1></Link>
+      <Link to="/" className='logo'> <h1>SouthSide - Shop</h1></Link>
       <ul className='menu'>
         <li><Link to="/" className='linkMenu'>Inicio</Link></li>
         <li><Link to="/productos" className='linkMenu'>Productos</Link></li>
